@@ -50,8 +50,10 @@ def main():
         choice = input("\nWould you like to (1) train a new model, (2) play a game, or (3) quit? ")
 
         if choice == "1":
+            model.reset()
             basic = False
             data_size = 0
+
             while True:
                 try:
                     data_size = max(1, int(input("How many samples would you like the model to train on? ")))
