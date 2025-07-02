@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Rock-Paper-Scissors</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Rock-Paper-Scissors</h1>
+
+        <div class="game-area">
+            <div class="choices">
+                <button id="rock-btn" class="move-btn" data-move="r">
+                    <span class="emoji">🪨</span> Rock
+                </button>
+                <button id="paper-btn" class="move-btn" data-move="p">
+                    <span class="emoji">📄</span> Paper
+                </button>
+                <button id="scissors-btn" class="move-btn" data-move="s">
+                    <span class="emoji">✂️</span> Scissors
+                </button>
+            </div>
+
+            <div class="results">
+                <p id="player-choice">You chose: -</p>
+                <p id="program-choice">Program chose: -</p>
+                <p id="game-result">Result: -</p>
+                <p id="model-status"></p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="train-model-btn" class="control-btn">Train New Model</button>
+            <input type="number" id="sample-size-input" placeholder="Number of samples" min="1" value="50">
+            <button id="play-game-btn" class="control-btn">Play Game</button>
+            <button id="reset-model-btn" class="control-btn">Reset Model</button>
+        </div>
+
+        <div id="message-box" class="message-box hidden">
+            <p id="message-text"></p>
+            <button id="message-ok-btn">OK</button>
+        </div>
+    </div>
+
+    <script src="/script.js"></script>
+</body>
+</html>
